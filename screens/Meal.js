@@ -1,5 +1,6 @@
 import { useLayoutEffect } from 'react';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, Button } from 'react-native';
+import IconButton from '../components/IconButton';
 import List from '../components/List';
 import { MEALS } from '../data/dummy-data';
 
@@ -7,9 +8,16 @@ export default Meal = ({ route, navigation }) => {
   const mealId = route.params.mealId;
   const meal = MEALS.find(meal => meal.id === mealId);
 
+  const hadleHeaderButtonPress = () => {
+    console.log('tapped')
+  }
+
   useLayoutEffect(() => {
-    navigation.setOptions({ title: meal.title });
-  }, [mealId, meal]);
+    navigation.setOptions({ 
+      title: meal.title,
+      headerRight: () => <IconButton icon="star-outline" iconColor="white" onPress={hadleHeaderButtonPress}/>
+    });
+  }, [navigation, meal]);
 
   return (
     <ScrollView style={{ flex: 1}}>
