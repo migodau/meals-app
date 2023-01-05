@@ -2,16 +2,16 @@ import Category from '../models/category';
 import Meal from '../models/meal';
 
 export const CATEGORIES = [
-  new Category('c1', 'Italian', '#f5428d'),
-  new Category('c2', 'Quick & Easy', '#f54242'),
-  new Category('c3', 'Hamburgers', '#f5a442'),
-  new Category('c4', 'German', '#f5d142'),
-  new Category('c5', 'Light & Lovely', '#368dff'),
-  new Category('c6', 'Exotic', '#41d95d'),
-  new Category('c7', 'Breakfast', '#9eecff'),
-  new Category('c8', 'Asian', '#b9ffb0'),
-  new Category('c9', 'French', '#ffc7ff'),
-  new Category('c10', 'Summer', '#47fced')
+  new Category('c1', 'Italian', '#FFCDD2'),
+  new Category('c2', 'Quick & Easy', '#BBDEFB'),
+  new Category('c3', 'Hamburgers', '#D1C4E9'),
+  new Category('c4', 'German', '#FFE0B2'),
+  new Category('c5', 'Light & Lovely', '#B2DFDB'),
+  new Category('c6', 'Exotic', '#FFCCBC'),
+  new Category('c7', 'Breakfast', '#D7CCC8'),
+  new Category('c8', 'Asian', '#C8E6C9'),
+  new Category('c9', 'French', '#FFF9C4'),
+  new Category('c10', 'Summer', '#E1BEE7')
 ];
 
 export const MEALS = [
