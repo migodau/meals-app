@@ -4,8 +4,8 @@ export default List  = ({ data }) => {
   return (
     <>
       {data.map((item, index) => (
-        <View style={styles.listItem}>
-          <Text style={styles.listItemText} key={index}>{item}</Text>
+        <View key={index} style={styles.listItem}>
+          <Text style={styles.listItemText}>{item}</Text>
         </View>
       ))}
     </>
