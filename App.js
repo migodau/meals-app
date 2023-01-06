@@ -8,7 +8,8 @@ import Favorites from './screens/Favorites';
 import Meal from './screens/Meal';
 import MealsOverview from './screens/MealsOverview';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import FavoritesContextProvider from './store/context/favorites-context';
+import { Provider } from 'react-redux';
+import { store } from './store/redux/store';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -46,7 +47,7 @@ export default function App() {
   return (
     <>
       <StatusBar style='light'/>
-      <FavoritesContextProvider>
+      <Provider store={store}>
         <NavigationContainer>
           <Stack.Navigator screenOptions={{
             headerStyle: { backgroundColor: '#C2185B' },
@@ -70,7 +71,7 @@ export default function App() {
             />
           </Stack.Navigator>
         </NavigationContainer>
-      </FavoritesContextProvider>
+      </Provider>
     </>
   );
 }
